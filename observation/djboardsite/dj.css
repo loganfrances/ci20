@@ -1,0 +1,72 @@
+body{
+    background-color: black;
+}
+
+body header{
+    font-family: "Lucinda Console", Monaco, monospace;
+  	color: white;
+  	position: sticky;
+  	top: 0px;
+  	z-index: 1;
+  	margin-bottom: 30px;
+}
+
+.mainphoto {
+	width: 80vw;
+	border-style: line;
+	border-color: white;
+	border-width: 3px;
+	position: relative;
+	left: 10vw;
+	margin-bottom: 10px;
+}
+
+#sliderdescription {
+	font-family: "Lucinda Console", Monaco, monospace;
+	color: white;
+	font-weight: bold;
+	font-size: 12px;
+	display: none;
+}
+
+#slider:hover #sliderdescription{
+	display: block;
+}
+
+p{
+	color: white;
+	font-family: "Lucinda Console", Monaco, monospace;
+	font-weight:bold;
+	font-size: 12px;
+	display: block;
+	width: 70vw;
+	margin-left: 15vw;
+	margin-bottom: 20px;
+}
+
+video{
+	position: relative;
+	left: 10vw;
+	width: 80vw;
+}
+
+
+body footer{
+	background-color: red;
+	padding-bottom: 30px;
+}
+
+#lastonethankgod {
+	background-color: aliceblue;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+#lastonethankgod img{
+	border-color: red;
+}
+
+#lastonethankgod p{
+	color: red;
+}
+
