@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>homework 01</title>
+	<style type="text/css">
+		html, body{
+			margin: 0px;
+			height: 100%;
+			width: 100%;
+		}
+		.topbox{
+			height: 75%;
+			box-sizing: border-box;
+		}
+		.bottombox{
+			background-color: antiquewhite;
+			height: 25%;
+			box-sizing: border-box;
+		}
+		.left{
+			background-color: antiquewhite;
+			border-right: 20px solid black; 
+			border-bottom: 20px solid black;
+			width: 25%;
+			height: 100%;
+			float: left;
+		}
+
+		.bottom{
+			float: right;
+			border-bottom: 40px solid black;
+			width: 100%;
+			height: 50%;
+			border-right: 0px;
+		}
+		.red{
+			border-bottom: 20px solid black;
+			background-color: #FF2700;
+			height: 100%;
+		}
+		.bottomleft{
+			float: left;
+			background-color: #1555FF;
+			border-right: 20px solid black;
+			width: 25%; 
+			height: 100%;
+		}
+		.middle{
+			width: 65%;
+			height: 100%;
+			border-right: 20px solid black;
+			float: left;
+		}
+		.bottomright{
+			height: 100%;
+			width: 10%;
+			float: left;
+		}
+		.sib{
+			height: 50%;
+			width: 100%;
+			border-bottom: 20px solid black; 
+			box-sizing: border-box;
+		}
+		.baby{
+			height: 50%;
+			background-color: yellow;
+			width: 100%;
+			border-top: 20px solid black; 
+			box-sizing: border-box;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="topbox">
+		<div class="topbox left">
+			<div class="topbox left bottom"></div>
+		</div>
+		<div class="topbox red"></div>
+	</div>
+	<div class="bottombox">
+		<div class="bottombox bottomleft"></div>
+		<div class="bottombox middle"></div>
+		<div class="bottombox bottomright">
+			<div class="bottombox sib"></div>
+			<div class="bottombox baby"></div>
+		</div>
+	</div>
+</body>
+</html>
