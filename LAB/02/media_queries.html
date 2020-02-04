@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=1">
+	<title>hTml mobile</title>
+	<style type="text/css">
+		html, body{
+			height: 100%;
+			margin:0;
+		}
+
+		body{
+			display: flex;
+			flex-direction: row;
+		}
+		div{
+			flex: 1;
+		}
+		div:nth-of-type(even){
+			/*you can type a number in the spot where "even" is and it will just target that div. also, you can use ex: 3n or 15n to target every nth*/
+			background-color: sienna;
+		}
+		div:nth-of-type(odd){
+			background-color: chocolate;
+		}
+		@media (max-width: 700px){
+			/*more css goes here*/
+			/*if the above statement is true, it will apply these styles*/
+			body{
+				flex-direction: column;
+			}
+		}
+
+		a:hover{
+			text-decoration: none;
+		}
+			/*all this does is takes away the underline when you hover over a link*/
+		
+		@media (hover: none){
+				div:nth-of-type(odd){
+			background-color: fuchsia;}
+		}
+	</style>
+</head>
+<body>
+
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+
+</body>
+</html>
