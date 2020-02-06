@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>go dj go dj</title>
+    <meta name="viewport" content="initial-scale=1">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            margin: 0px;
+        }
+        body{
+            background-image: linear-gradient(0deg, rgba(29, 245, 142,1) 0%, rgba(0, 0, 255, 1) 100%);
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body::-webkit-scrollbar{
+            display: none;
+        }
+        .step{
+            height: 40vh;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: nowrap;
+            align-items: center;
+            background-color: black;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            z-index: 1;
+        }
+        h1, p {
+            color: aliceblue;
+            font-family: 'Oxygen', sans-serif;
+            margin: 20px;
+        }
+        h1{
+            font-weight: 700;
+        }
+        .seven{
+            background-color: transparent;
+        }
+        .seven h1{
+            color: black;
+        }
+        .seven p{
+            color: black;
+        }
+        #title{
+            font-size: 4rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-left: 5%;
+            margin: 0;
+            z-index: 0;
+        }
+        #title:hover{
+            color: mediumspringgreen;
+            transition: color 1s ease-in;
+        }
+        .firstbreak{
+            display: flex;
+            flex: 1;
+        }
+        .first{
+            margin: 10px;
+        }
+        .secondbreak{
+            display: flex;
+            flex: 1;
+        }
+        .second{
+            font-size: .75rem;
+            margin: 10px
+        }
+        .interruptor{
+            z-index: -1;
+            height: 20rem;
+        }
+        .interruptor p{
+            color: #15f5f6;
+            font-weight: 700;
+            font-size: 5rem;
+            position: sticky;
+            top: 0px;
+        }
+        .interruptor p:hover{
+            color: transparent;
+            transition: color 2s ease-in-out;
+        }
+        
+        .two{font-size: 8px;}
+        .two h1{margin: 10px; font-size: smaller;}
+        .active{float: right;}
+        .deck{left: 50%;}
+        .thirdsec div{margin: 20px; position: sticky;}
+        .thirdsec h1{font-size: smaller;}
+        .near p{padding-left: 40vw;}
+        .near p:hover{color: transparent;}
+        .last div{ margin: 4vw; height: 20%;
+        }
+        .last h1{font-size: smaller;}
+        
+        @media (max-width: 767px){
+            .step{
+                width: 100%;
+                height: initial;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 10px;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+                align-items: center;
+                text-align: justify;
+                padding: 0;
+                font-size: smaller;
+            }
+            .two div {margin: 2px;} 
+            .interruptor{
+                display: none;
+            }
+            .firstbreak{
+                display: flex;76
+            }
+            #title{
+                padding: 0px;
+            }
+        }
+    </style>
+    <script>
+    
+    </script>
+</head>
+<body>
+    <h1 id="title">go dj</h1>
+		<div class="step">
+            <h1>step one</h1>
+            <p> select a song with the browsing dial in the middle of the board. load it to deck 1 using the LOAD 1 button. repeat steps for deck 2. </p>
+        </div>
+		<div class="step">
+            <h1>step two</h1>
+            <p>press play on either deck 1 or deck 2. this will be our <i>active track.</i> if you need more time to know when to transition, loop this track with the autoloop feature.</p>
+        </div>
+		<div class="step">
+            <h1> step three</h1>
+            <p> now match the song's BPM on the deck that is not playing to the BPM of the song that is playing. this can be done with the slider or the sync button. we'll call this track the <i>transition track.</i></p>
+        </div>
+		<div class="step">
+            <h1>step four</h1>
+            <p>slide the channel fader on the transition deck's side all the way to zero. this will prevent the channel from outputing to the speakers, but will allow you to start the track when you need.</p>
+        </div>
+		<div class="step">
+            <h1>step five</h1>
+            <p>wait until the active track gets to the place you want to transition. when that happens, you can either loop the track to give you more time to prepare, or immediately start adding the transition track.begin playing the transition track on the opposite deck, and start slowly turning up the channel fader.</p>
+        </div>
+		<div class="step">
+            <h1>step six</h1>
+            <p>now that you've begun to introduce the transition track, begin simultaneously exiting the active track by either turning hown the channel fader, or filtering out the song using the filter knob. after either of those options are maxed out, pause the song, and finish turning up the transition track.</p>
+        </div>
+		<div class="step seven">
+            <h1>step seven</h1>
+            <p>repeat steps 1-7 with another song. </p>
+        </div>
+        <div class="firstbreak">
+            <div class="step first">
+                <h1>step one</h1>
+                <p> select a song with the browsing dial in the middle of the board. load it to deck 1 using the LOAD 1 button. repeat steps for deck 2. </p>
+            </div>
+            <div class="step first">
+                <h1>step two</h1>
+                <p>press play on either deck 1 or deck 2. this will be our <i>active track.</i> if you need more time to know when to transition, loop this track with the autoloop feature.</p>
+            </div>
+        </div>
+        <div class="firstbreak">
+            <div class="step first">
+                <h1> step three</h1>
+                <p> now match the song's BPM on the deck that is not playing to the BPM of the song that is playing. this can be done with the slider or the sync button. we'll call this track the <i>transition track.</i></p>
+            </div>
+            <div class="step first">
+                <h1>step four</h1>
+                <p>slide the channel fader on the transition deck's side all the way to zero. this will prevent the channel from outputing to the speakers, but will allow you to start the track when you need.</p>
+            </div>
+        </div>
+        <div class="firstbreak">
+            <div class="step first">
+                <h1>step five</h1>
+                <p>wait until the active track gets to the place you want to transition. when that happens, you can either loop the track to give you more time to prepare, or immediately start adding the transition track.begin playing the transition track on the opposite deck, and start slowly turning up the channel fader.</p>
+            </div>
+            <div class="step first">
+                <h1>step six</h1>
+                <p>now that you've begun to introduce the transition track, begin simultaneously exiting the active track by either turning hown the channel fader, or filtering out the song using the filter knob. after either of those options are maxed out, pause the song, and finish turning up the transition track.</p>
+            </div>
+        </div>
+            <div class="step seven">
+                <h1>step seven</h1>
+                <p>repeat steps 1-7 with another song. </p>
+            </div>
+        
+        <div class="secondbreak">
+            <div class="step second">
+                <h1>step one</h1>
+                <p> select a song with the browsing dial in the middle of the board. load it to deck 1 using the LOAD 1 button. repeat steps for deck 2. </p>
+            </div>
+            <div class="step second">
+                <h1>step two</h1>
+                <p>press play on either deck 1 or deck 2. this will be our <i>active track.</i> if you need more time to know when to transition, loop this track with the autoloop feature.</p>
+            </div>
+            <div class="step second">
+                <h1> step three</h1>
+                <p> now match the song's BPM on the deck that is not playing to the BPM of the song that is playing. this can be done with the slider or the sync button. we'll call this track the <i>transition track.</i></p>
+            </div>
+        </div>
+        <div class="secondbreak">
+            <div class="step second">
+                <h1>step four</h1>
+                <p>slide the channel fader on the transition deck's side all the way to zero. this will prevent the channel from outputing to the speakers, but will allow you to start the track when you need.</p>
+            </div>
+            <div class="step second">
+                <h1>step five</h1>
+                <p>wait until the active track gets to the place you want to transition. when that happens, you can either loop the track to give you more time to prepare, or immediately start adding the transition track.begin playing the transition track on the opposite deck, and start slowly turning up the channel fader.</p>
+            </div>
+            <div class="step second">
+                <h1>step six</h1>
+                <p>now that you've begun to introduce the transition track, begin simultaneously exiting the active track by either turning hown the channel fader, or filtering out the song using the filter knob. after either of those options are maxed out, pause the song, and finish turning up the transition track.</p>
+            </div>
+        </div>
+		<div class="step seven">
+            <h1>step seven</h1>
+            <p>repeat steps 1-7 with another song. </p>
+        </div>
+        <div class="interruptor">
+            <p>transition track</p>
+        </div>
+    <div class="secondbreak two">
+        <div class="step second">
+                <h1>step one</h1>
+                <p> select a song with the browsing dial in the middle of the board. load it to deck 1 using the LOAD 1 button. repeat steps for deck 2. </p>
+            </div>
+            <div class="step second">
+                <h1>step two</h1>
+                <p>step two step two</p>
+            </div>
+    <div class="firstbreak">
+            <div class="step first">
+                <h1> step three</h1>
+                <p> step three step three step three </p>
+            </div>
+            <div class="step first">
+                <h1>step four</h1>
+                <p>step four step four step four step four</p>
+            </div>
+        </div>
+        <div class="firstbreak">
+            <div class="step first">
+                <h1>step five</h1>
+                <p> step five step five step five step five</p>            </div>
+            <div class="step first">
+                <h1>step six</h1>
+                <p>step six step six step six step six</p>
+            </div>
+        </div>
+         </div>
+        <div class="interruptor active">
+            <p>active track _sync</p>
+        </div>
+        <div class="step seven">
+                <h1>step seven</h1>
+                <p>repeat steps 1-7 with another song. </p>
+            </div>
+        <div class="interruptor deck">
+            <p> deck 1 deck 1</p>
+        </div>
+    
+        <div class="secondbreak thirdsec">
+            <div class="step">
+                <h1>step one</h1>
+            </div>
+            <div class="step">
+                <h1>step two</h1>
+            </div>
+            <div class="step">
+                <h1> step three</h1>
+            </div>
+            <div class="step">
+                <h1>step four</h1>
+            </div>
+            <div class="step">
+                <h1>step five</h1>
+            </div>
+            <div class="step">
+                <h1>step six</h1>
+            </div>
+         </div>
+        <div class="interruptor near"><p>select a song</p> <p>1</p></div>
+    
+            <div class="step seven">
+                <h1>step seven</h1>
+                <p>repeat steps 1-7 with another song. </p>
+            </div>
+     <div class="secondbreak last">
+        <div class="step">
+                <h1>one</h1>
+            </div>
+            <div class="step">
+                <h1>two</h1>
+            </div>
+            <div class="step">
+                <h1>three</h1>
+            </div>
+            <div class="step">
+                <h1>four</h1>
+            </div>
+            <div class="step">
+                <h1>five</h1>
+            </div>
+            <div class="step">
+                <h1>six</h1>
+            </div>
+        </div>
+            <div class="step seven">
+                <h1>step seven</h1>
+                <p>repeat steps 1-7 with another song. </p>
+            </div>
+
+<!--transition back-->
+    
+    <div class="secondbreak thirdsec">
+            <div class="step">
+                <h1>step one</h1>
+            </div>
+            <div class="step">
+                <h1>step two</h1>
+            </div>
+            <div class="step">
+                <h1> step three</h1>
+            </div>
+            <div class="step">
+                <h1>step four</h1>
+            </div>
+            <div class="step">
+                <h1>step five</h1>
+            </div>
+            <div class="step">
+                <h1>step six</h1>
+            </div>
+         </div>
+        <div class="interruptor near"><p>select a song</p> <p>1</p></div>
+    
+            <div class="step seven">
+                <h1>step seven</h1>
+                <p>repeat steps 1-7 with another song. </p>
+            </div>
+        <div class="secondbreak two">
+        <div class="step second">
+                <h1>step one</h1>
+                <p> select a song with the browsing dial in the middle of the board. load it to deck 1 using the LOAD 1 button. repeat steps for deck 2. </p>
+            </div>
+            <div class="step second">
+                <h1>step two</h1>
+                <p>step two step two</p>
+            </div>
+    <div class="firstbreak">
+            <div class="step first">
+                <h1> step three</h1>
+                <p> step three step three step three </p>
+            </div>
+            <div class="step first">
+                <h1>step four</h1>
+                <p>step four step four step four step four</p>
+            </div>
+        </div>
+        <div class="firstbreak">
+            <div class="step first">
+                <h1>step five</h1>
+                <p> step five step five step five step five</p>            </div>
+            <div class="step first">
+                <h1>step six</h1>
+                <p>step six step six step six step six</p>
+            </div>
+        </div>
+         </div>
+        <div class="interruptor active">
+            <p>active track _sync</p>
+        </div>
+        <div class="step seven">
+                <h1>step seven</h1>
+                <p>repeat steps 1-7 with another song. </p>
+            </div>
+        <div class="interruptor deck">
+            <p> deck 1 deck 1</p>
+        </div>
+     <div class="secondbreak">
+            <div class="step second">
+                <h1>step one</h1>
+                <p> select a song with the browsing dial in the middle of the board. load it to deck 1 using the LOAD 1 button. repeat steps for deck 2. </p>
+            </div>
+            <div class="step second">
+                <h1>step two</h1>
+                <p>press play on either deck 1 or deck 2. this will be our <i>active track.</i> if you need more time to know when to transition, loop this track with the autoloop feature.</p>
+            </div>
+            <div class="step second">
+                <h1> step three</h1>
+                <p> now match the song's BPM on the deck that is not playing to the BPM of the song that is playing. this can be done with the slider or the sync button. we'll call this track the <i>transition track.</i></p>
+            </div>
+        </div>
+        <div class="secondbreak">
+            <div class="step second">
+                <h1>step four</h1>
+                <p>slide the channel fader on the transition deck's side all the way to zero. this will prevent the channel from outputing to the speakers, but will allow you to start the track when you need.</p>
+            </div>
+            <div class="step second">
+                <h1>step five</h1>
+                <p>wait until the active track gets to the place you want to transition. when that happens, you can either loop the track to give you more time to prepare, or immediately start adding the transition track.begin playing the transition track on the opposite deck, and start slowly turning up the channel fader.</p>
+            </div>
+            <div class="step second">
+                <h1>step six</h1>
+                <p>now that you've begun to introduce the transition track, begin simultaneously exiting the active track by either turning hown the channel fader, or filtering out the song using the filter knob. after either of those options are maxed out, pause the song, and finish turning up the transition track.</p>
+            </div>
+        </div>
+		<div class="step seven">
+            <h1>step seven</h1>
+            <p>repeat steps 1-7 with another song. </p>
+        </div>
+        <div class="interruptor">
+            <p>transition track</p>
+        </div>
+        <div class="firstbreak">
+            <div class="step first">
+                <h1>step one</h1>
+                <p> select a song with the browsing dial in the middle of the board. load it to deck 1 using the LOAD 1 button. repeat steps for deck 2. </p>
+            </div>
+            <div class="step first">
+                <h1>step two</h1>
+                <p>press play on either deck 1 or deck 2. this will be our <i>active track.</i> if you need more time to know when to transition, loop this track with the autoloop feature.</p>
+            </div>
+        </div>
+        <div class="firstbreak">
+            <div class="step first">
+                <h1> step three</h1>
+                <p> now match the song's BPM on the deck that is not playing to the BPM of the song that is playing. this can be done with the slider or the sync button. we'll call this track the <i>transition track.</i></p>
+            </div>
+            <div class="step first">
+                <h1>step four</h1>
+                <p>slide the channel fader on the transition deck's side all the way to zero. this will prevent the channel from outputing to the speakers, but will allow you to start the track when you need.</p>
+            </div>
+        </div>
+        <div class="firstbreak">
+            <div class="step first">
+                <h1>step five</h1>
+                <p>wait until the active track gets to the place you want to transition. when that happens, you can either loop the track to give you more time to prepare, or immediately start adding the transition track.begin playing the transition track on the opposite deck, and start slowly turning up the channel fader.</p>
+            </div>
+            <div class="step first">
+                <h1>step six</h1>
+                <p>now that you've begun to introduce the transition track, begin simultaneously exiting the active track by either turning hown the channel fader, or filtering out the song using the filter knob. after either of those options are maxed out, pause the song, and finish turning up the transition track.</p>
+            </div>
+        </div>
+            <div class="step seven">
+                <h1>step seven</h1>
+                <p>repeat steps 1-7 with another song. </p>
+            </div>
+        <div class="step">
+            <h1>step one</h1>
+            <p> select a song with the browsing dial in the middle of the board. load it to deck 1 using the LOAD 1 button. repeat steps for deck 2. </p>
+        </div>
+		<div class="step">
+            <h1>step two</h1>
+            <p>press play on either deck 1 or deck 2. this will be our <i>active track.</i> if you need more time to know when to transition, loop this track with the autoloop feature.</p>
+        </div>
+		<div class="step">
+            <h1> step three</h1>
+            <p> now match the song's BPM on the deck that is not playing to the BPM of the song that is playing. this can be done with the slider or the sync button. we'll call this track the <i>transition track.</i></p>
+        </div>
+		<div class="step">
+            <h1>step four</h1>
+            <p>slide the channel fader on the transition deck's side all the way to zero. this will prevent the channel from outputing to the speakers, but will allow you to start the track when you need.</p>
+        </div>
+		<div class="step">
+            <h1>step five</h1>
+            <p>wait until the active track gets to the place you want to transition. when that happens, you can either loop the track to give you more time to prepare, or immediately start adding the transition track.begin playing the transition track on the opposite deck, and start slowly turning up the channel fader.</p>
+        </div>
+		<div class="step">
+            <h1>step six</h1>
+            <p>now that you've begun to introduce the transition track, begin simultaneously exiting the active track by either turning hown the channel fader, or filtering out the song using the filter knob. after either of those options are maxed out, pause the song, and finish turning up the transition track.</p>
+        </div>
+		<div class="step seven">
+            <h1>step seven</h1>
+            <p>repeat steps 1-7 with another song. </p>
+        </div>
+</body>
+</html>
