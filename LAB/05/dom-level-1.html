@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dom level 1</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<nav></nav>
+	<h1 id="title" class="headers">the history of 80s rom com</h1>
+</body>
+<script>
+	
+	var header = document.getElementById("title");
+	console.log(header);
+	header.style.color = "red";
+
+
+	var headers = document.querySelectorAll(".headers");
+	console.log(headers);
+	headers[0].style.color = "purple";
+
+// creating elements
+	//step 1 create the element
+	var h1 = document.createElement("h1");
+	//step 2 styling
+	h1.innerHTML = "the history of 90s rom coms";
+	console.log(h1);
+	//step 3 appending to the page
+	document.body.appendChild(h1);
+
+	var text = document.createElement("p");
+	text.innerHTML = "hello";
+	document.querySelector("nav").appendChild(text);
+
+</script>
+</html>

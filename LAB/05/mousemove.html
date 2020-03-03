@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<title>mices</title>
+
+<style type="text/css">
+	div{
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		border-radius: 10px;
+		margin-left: -10px;
+		margin-top: -10px;
+	}
+</style>
+
+<body></body>
+
+<script>
+	var handler = function(event) {
+		//this event will have information about where the mouse is and what its doing, since mousemove is calling it later
+		console.log(event);
+		var div = document.createElement("div");
+
+		function randomInteger(){
+			var number = Math.floor(Math.random()*256);
+			console.log(number);
+			return number;
+		}
+		div.style.backgroundColor = "rgb(" + randomInteger() + ", 0, " + randomInteger() + ")";
+		div.style.top = event.y + "px";
+		div.style.left = event.x + "px";
+		document.body.appendChild(div);
+	}
+
+	document.onmousemove = handler;
+</script>

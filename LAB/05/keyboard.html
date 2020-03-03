@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<title> keyboard </title>
+
+<body>
+	<p id="text"></p>
+</body>
+
+<script>
+	document.onkeypress = function(event){
+		console.log("key press", event);
+		//a lot of the meta keys don't work
+	};
+
+	document.onkeydown = function(event){
+		console.log("key down", event);
+		document.querySelector("#text").innerHTML = document.querySelector("#text").innerHTML + event.key;
+	};
+
+	document.onkeyup = function(event){
+		console.log("key up", event);
+	}
+</script>

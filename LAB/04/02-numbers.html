@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<title>.</title>
+<script>
+	console.log("hello");
+
+	var num = 5;
+	console.log(num);
+	// we can do math on this variable
+
+	console.log(num/10);
+
+	num = 13;
+	console.log(num);
+
+// here, num shows up as 13 in the console. why did we not type var? var creates the space in the memory, so we don't have to re-dig to make more space for the same variables. 
+
+	num = num + 5;
+	console.log(num);
+// in order of operations, computer does everything to the right of equal sign first, then stores it in the left of the equal sign.
+// now what happens to the original values of num? to 5 and 13? 
+// A: it is lost forever. the memory is overwritten. 
+
+//what can go inside a number>
+var large =  Infinity;
+var lowest = -Infinity
+var impossible = 0/0;
+console.log(large, impossible);
+
+// key difference between integers (whole numbers) and decimal numbers
+
+// in computing, we call decimal numbers "floats"
+// to convert a float to an int
+var whole = Math.floor(3.1415);
+console.log(whole);
+
+</script>
