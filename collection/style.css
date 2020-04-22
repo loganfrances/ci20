@@ -1,0 +1,96 @@
+html{
+	margin: 0;
+}
+body {
+	height: 100vh;
+	/*display: flex;
+	flex-direction: row;*/ 
+	/*mizzztakeee, this was tripping me up and forcing the wall
+	onto the side.*/
+	margin: 0;
+
+}
+
+a{
+	color: blue;
+	text-decoration: none;
+	margin-left: 1vw;
+}
+a:hover{ color: orange; }
+#linkz{ float: right; }
+
+#header{
+	height: 12vh;
+	width:100%;
+	display: block;
+	font-family: 'Playfair Display', serif;
+	/*not sure why the font wouldn't apply in the actual anchor tag styling*/
+	text-decoration: none;
+	padding: 3vh;
+	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	left: 0;
+
+}
+
+#circ {
+	border-radius: 100%;
+	background-color: blue;
+	height: 1em;
+	width: 1em;
+	float: left;
+	
+}
+
+.wall{
+	overflow-x: scroll;
+	overflow-y: hidden; 
+	/*running into an issue here with the horizontal scrolling, seems
+	like its not happening. gonna try populating more images to test.*/
+	/*background-color: aqua;*/
+	display: block;
+	height: 88vh;
+	width: 3vw;
+	padding-top: 20vh;
+	box-sizing: border-box;
+}
+
+
+.piece, .support{
+	max-width: 30vh;
+}
+
+.piece{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.support{ float: right; }
+
+.item{
+	/*width: inherit;*/
+	/*height: inherit;*/
+	max-width: 30vh;
+	display: block;
+	float: left;
+	margin-left: 2vw;
+	position: absolute;
+	transition: transform .5s ease-in-ease-out;
+	/*thinking about how to size these as proportional to the content itself 
+	rather than a parent element. or is that even smart to do? was thinking if 
+	everything was 30% of its original size, it would fit on the screen but hmm. 
+	maybe as roon. 
+	// add width into ledger, set height to auto
+
+	also thinking about how to position these.*/
+}
+
+.item:hover{
+	z-index: 6;
+	transform: scale(1.5);
+
+	cursor: crosshair;
+	color: orange;
+}

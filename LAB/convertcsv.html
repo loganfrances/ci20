@@ -1,0 +1,65 @@
+<!-- arrays are technically objects, but with the constraints of all keys are numbers -->
+<!-- what we want with our csv file is an array of arrays.  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="file">
+</body>
+<script>
+		// <!-- this bit of code opens the file and converts it into a string -->
+		document.querySelectorAll("input")[0].onchange = function(event){
+			// this is a function that gets called by the browser
+			var file = event.target.files[0];
+			var reader = new FileReader();
+			reader.readAsText(file, "UTF-8");
+			reader.onload = function(readerEvent){
+			didLoad(readerEvent.target.result);
+			};
+		};
+		// the file has finished loading, as is converted into one string
+		function didLoad(text){
+			// split the strings at the newlines
+			// the variable "lines" is an array of strings
+			var lines = text.split(/\r\n|\n/);
+			console.log(lines);
+
+			// first lets process the categories
+			var header = lines[0].split("\t");
+			console.log(header);
+
+			var json = [];
+
+			for (var i = 1; i < lines.length; i = i + 1){
+				var row = lines[i].split("\t");
+				console.log(row);
+				// for each row, we're making an object
+				var object = {};
+				// a second loop loops over the entries in the array
+				// and puts them into this object
+				for (var j = 0; j < row.length; j = j + 1){
+					var key = header[j];
+					object[key] = row[j]
+					};
+			// the object is now filled up with the contents of the row
+			json.push(object);
+			console.log(json)
+			};
+		download(json, "data.json");
+		};
+		
+		function download (data, filename){
+			var a = document.createElement("a")
+			var blob = new window.Blob([JSON.stringify(data)] , {type:"text/plain"})
+			a.setAttribute("href", window.URL.createObjectURL(blob));
+			a.setAttribute("download" , filename);
+			document.body.appendChild(a);
+			a.click();
+			a.remove();
+
+		}
+	</script>
+</html>

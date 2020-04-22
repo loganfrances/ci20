@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// <!-- challenge is to only show certain items (filtering) -->
+		// example, we only wanna see colors, not type
+		fetch("data.json")
+			.then(function(blob){return blob.json(); })
+			.then(function(json){buildPage(json); });
+
+		function buildPage(data) {
+			// filter is asking for a true or false, so for each item we generate a true||fale statement.
+			// for (var i = 0, i < data.length; i = i + 1;){
+			// 	console.log(data[i]);
+			// }
+
+			// "entry" is an object, it is each object inside the data
+
+			// var black = data.filter(function(entry){ return entry.color == "black";  });
+			// console.log(black);
+			// for including multiple colors, use this code 
+			var black = data.filter(function(entry){ return entry.color.includes("black")});
+			console.log(black)
+		};
+
+// create images in js -- createElement('img')
+// 
+// all of this inside of a for loop, for i=0, i<data.length, i=i+1, {
+	// img.src = data[i].img
+
+// }
+
+	</script>
+
+</body>
+</html>

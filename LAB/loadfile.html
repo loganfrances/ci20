@@ -1,0 +1,28 @@
+<!-- arrays are technically objects, but with the constraints of all keys are numbers -->
+<!-- what we want with our csv file is an array of arrays.  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="file">
+</body>
+<script>
+		// <!-- this bit of code opens the file and converts it into a string -->
+		document.querySelectorAll("input")[0].onchange = function(event){
+			// this is a function that gets called by the browser
+			var file = event.target.files[0];
+			var reader = new FileReader();
+			reader.readAsText(file, "UTF-8");
+			reader.onload = function(readerEvent){
+			didLoad(readerEvent.target.result);
+			};
+		};
+		// the file has finished loading, as is converted into one string
+		function didLoad(text){
+			console.log(text);
+		};
+	</script>
+</html>

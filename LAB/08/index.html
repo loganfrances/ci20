@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		
+		fetch("data.json")
+			.then(function(blob){return blob.json(); })
+			.then(function(json){buildPage(json); });
+
+		function buildPage(data) {
+			console.log(data)
+		}
+
+	</script>
+</body>
+</html>

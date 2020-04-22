@@ -1,0 +1,14 @@
+body { 
+	display: flex;   
+	flex-direction: row; 
+} 
+
+.sidebar { 
+	flex: 0 0 150px;
+	background-color: rgb(50, 50, 50);
+ } 
+
+.content { 
+	flex: 1; 
+	background-color: blue;
+}
