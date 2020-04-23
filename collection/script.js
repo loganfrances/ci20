@@ -11,9 +11,12 @@ xmlhttp.onreadystatechange = function() {
         
     buildIndex(data) //little hiccup here, forgot to add this earlier and NOTHING  was showing.
     //so all this action happens on page load.
+	};
 };
+
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
+
 
 
 
@@ -57,9 +60,9 @@ function buildIndex(data){
 		//make them be able to overlap, position absolute or relative,
 
 		wall.appendChild(item);
-		item.addEventListener('onmousedown', (event) =>{
-		item.style.width = 600 + "px"
-		});
+		// item.addEventListener('onmousedown', (event) =>{
+		// item.style.width = 600 + "px"
+		// }); ask roon bout this, attempting to open each element and float it above the page.
 
 	};
 };
